@@ -1,0 +1,19 @@
+# Monolithic dataset source code (excluded from git tracking per user instruction)
+dataset/
+
+# Python cache & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pkl
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store

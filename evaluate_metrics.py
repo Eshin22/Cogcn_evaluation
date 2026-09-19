@@ -28,10 +28,16 @@ COGCN_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "cogcn_repo
 if COGCN_PATH not in sys.path:
     sys.path.insert(0, COGCN_PATH)
 
-from model import GCNAE
-from optimizer import compute_structure_loss, compute_attribute_loss, update_o1, update_o2
-from kmeans import Clustering
-from utils import preprocess_graph
+try:
+    from cogcn_repo.cogcn.model import GCNAE
+    from cogcn_repo.cogcn.optimizer import compute_structure_loss, compute_attribute_loss, update_o1, update_o2
+    from cogcn_repo.cogcn.kmeans import Clustering
+    from cogcn_repo.cogcn.utils import preprocess_graph
+except (ImportError, ModuleNotFoundError):
+    from model import GCNAE
+    from optimizer import compute_structure_loss, compute_attribute_loss, update_o1, update_o2
+    from kmeans import Clustering
+    from utils import preprocess_graph
 
 
 DATASET_METADATA = {

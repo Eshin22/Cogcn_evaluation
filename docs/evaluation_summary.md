@@ -21,15 +21,15 @@ CoGCN optimizes an objective function with structural reconstruction, semantic a
 
 ## 10-Run Dynamic $K$ Metrics Summary Table across All Datasets
 
-| Order | Metric Code | Metric Name | Spring PetClinic ($K=8$) | JPetStore-6 ($K=5$) | AcmeAir ($K=15$) | PlantsByWebSphere ($K=5$) | DayTrader 7 ($K=16$) | JForum ($K=19$) | JavaFX Point-of-Sales ($K=3$) | SpringBlog ($K=8$) | Apache Roller ($K=19$) | Bear Board ($K=5$) | Train Ticket ($K=18$) | DietApp ($K=8$) | IBM CICS GenApp ($K=6$) | AutoCare Nepal ($K=9$) | Pharmacy Management System ($K=11$) | Favorable Direction |
+| Order | Metric Code | Metric Name | Spring PetClinic ($K=8$) | JPetStore-6 ($K=5$) | AcmeAir ($K=15$) | PlantsByWebSphere ($K=5$) | DayTrader 7 ($K=16$) | JForum ($K=19$) | JavaFX Point-of-Sales ($K=3$) | SpringBlog ($K=8$) | Apache Roller ($K=19$) | Bear Board ($K=5$) | Train Ticket ($K=18$) | DietApp ($K=8$) | IBM CICS GenApp ($K=13$) | AutoCare Nepal ($K=9$) | Pharmacy Management System ($K=11$) | Favorable Direction |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1** | **SM** | Structural Modularity | **`0.022459`** | **`0.194863`** | **`0.088446`** | **`0.043116`** | **`0.028411`** | **`0.136679`** | **`0.097203`** | **`0.135779`** | **`0.104670`** | **`0.114975`** | **`0.074897`** | **`0.168861`** | **`0.034637`** | **`0.094460`** | **`0.090299`** | Higher is better |
-| **2** | **ICP** | Inter-Call Pair / Coupling | **`0.086747`** | **`0.057539`** | **`0.081034`** | **`0.112823`** | **`0.119196`** | **`0.001639`** | **`0.017347`** | **`0.035505`** | **`0.000352`** | **`0.022071`** | **`0.000931`** | **`0.009423`** | **`0.058204`** | **`0.005012`** | **`0.022006`** | Lower is better |
-| **3** | **BCP** | Business Use Case Entropy | **`1.045257`** | **`1.423184`** | **`1.176342`** | **`1.301031`** | **`1.428384`** | **`1.104741`** | **`1.784612`** | **`1.786906`** | **`0.991223`** | **`1.769419`** | **`1.341427`** | **`0.814102`** | **`1.298099`** | **`0.985789`** | **`1.127462`** | Lower is better |
-| **4** | **IFN** | Interface Number | **`2.362500`** | **`3.080000`** | **`3.593333`** | **`5.340000`** | **`3.268750`** | **`4.152632`** | **`1.066667`** | **`2.762500`** | **`3.631579`** | **`2.240000`** | **`3.966667`** | **`2.250000`** | **`2.066667`** | **`0.900000`** | **`1.927273`** | Lower is better |
-| **5** | **NED** | Non-Extreme Distribution | **`0.839535`** | **`0.950000`** | **`0.791011`** | **`0.925000`** | **`0.880153`** | **`0.108579`** | **`0.944118`** | **`0.866667`** | **`0.112348`** | **`0.948718`** | **`0.057729`** | **`0.814815`** | **`0.795455`** | **`0.812245`** | **`0.859322`** | Lower $1-\text{NED}$ |
-| **6** | **CHD** | Cohesion at Domain Level | **`0.292898`** | **`0.211024`** | **`0.177063`** | **`0.348738`** | **`0.200535`** | **`0.314125`** | **`0.137681`** | **`0.307519`** | **`0.151989`** | **`0.337501`** | **`0.207772`** | **`0.367635`** | **`0.245971`** | **`0.271451`** | **`0.290528`** | Higher is better |
-| **7** | **CHM** | Cohesion at Message Level | **`0.412571`** | **`0.294669`** | **`0.303102`** | **`0.445328`** | **`0.340841`** | **`0.490865`** | **`0.439458`** | **`0.382475`** | **`0.285331`** | **`0.455889`** | **`0.314477`** | **`0.452770`** | **`0.719058`** | **`0.401065`** | **`0.324738`** | Higher is better |
+| **1** | **SM** | Structural Modularity | **`0.022459`** | **`0.194863`** | **`0.088446`** | **`0.043116`** | **`0.028411`** | **`0.136679`** | **`0.097203`** | **`0.135779`** | **`0.104670`** | **`0.114975`** | **`0.074897`** | **`0.168861`** | **`0.013029`** | **`0.094460`** | **`0.090299`** | Higher is better |
+| **2** | **ICP** | Inter-Call Pair / Coupling | **`0.086747`** | **`0.057539`** | **`0.081034`** | **`0.112823`** | **`0.119196`** | **`0.001639`** | **`0.017347`** | **`0.035505`** | **`0.000352`** | **`0.022071`** | **`0.000931`** | **`0.009423`** | **`0.010090`** | **`0.005012`** | **`0.022006`** | Lower is better |
+| **3** | **BCP** | Business Use Case Entropy | **`1.045257`** | **`1.423184`** | **`1.176342`** | **`1.301031`** | **`1.428384`** | **`1.104741`** | **`1.784612`** | **`1.786906`** | **`0.991223`** | **`1.769419`** | **`1.341427`** | **`0.814102`** | **`0.416743`** | **`0.985789`** | **`1.127462`** | Lower is better |
+| **4** | **IFN** | Interface Number | **`2.362500`** | **`3.080000`** | **`3.593333`** | **`5.340000`** | **`3.268750`** | **`4.152632`** | **`1.066667`** | **`2.762500`** | **`3.631579`** | **`2.240000`** | **`3.966667`** | **`2.250000`** | **`0.784615`** | **`0.900000`** | **`1.927273`** | Lower is better |
+| **5** | **NED** | Non-Extreme Distribution | **`0.839535`** | **`0.950000`** | **`0.791011`** | **`0.925000`** | **`0.880153`** | **`0.108579`** | **`0.944118`** | **`0.866667`** | **`0.112348`** | **`0.948718`** | **`0.057729`** | **`0.814815`** | **`0.547727`** | **`0.812245`** | **`0.859322`** | Lower $1-\text{NED}$ |
+| **6** | **CHD** | Cohesion at Domain Level | **`0.292898`** | **`0.211024`** | **`0.177063`** | **`0.348738`** | **`0.200535`** | **`0.314125`** | **`0.137681`** | **`0.307519`** | **`0.151989`** | **`0.337501`** | **`0.207772`** | **`0.367635`** | **`0.285749`** | **`0.271451`** | **`0.290528`** | Higher is better |
+| **7** | **CHM** | Cohesion at Message Level | **`0.412571`** | **`0.294669`** | **`0.303102`** | **`0.445328`** | **`0.340841`** | **`0.490865`** | **`0.439458`** | **`0.382475`** | **`0.285331`** | **`0.455889`** | **`0.314477`** | **`0.452770`** | **`0.482201`** | **`0.401065`** | **`0.324738`** | Higher is better |
 
 ---
 
@@ -179,16 +179,16 @@ CoGCN optimizes an objective function with structural reconstruction, semantic a
 - **Message Cohesion (CHM)**: `0.452770 ± 0.000000`
 - **Links**: [`dataset/dietapp/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/dietapp) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/dietapp/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/dietapp/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/dietapp/decomposition.json))
 
-### 13. IBM CICS GenApp ($K=6$, $V=44$)
+### 13. IBM CICS GenApp ($K=13$, $V=44$)
 - **System Overview**: General Insurance Enterprise Application benchmark written in COBOL for IBM CICS transaction processing systems.
-- **Dynamic Optimal Cluster Count**: $K=6$ (Score = `0.2444`)
-- **Structural Modularity (SM)**: `0.034637 ± 0.011548`
-- **Inter-Service Coupling (ICP)**: `0.058204 ± 0.006762`
-- **Business Use Case Entropy (BCP)**: `1.298099 ± 0.075140`
-- **Interface Complexity (IFN)**: `2.066667 ± 0.081650`
-- **Non-Extreme Distribution (NED)**: `0.795455` *(1-NED: `0.204545`)*
-- **Domain Cohesion (CHD)**: `0.245971 ± 0.086032`
-- **Message Cohesion (CHM)**: `0.719058 ± 0.079937`
+- **Dynamic Optimal Cluster Count**: $K=13$ (Score = `0.2351`)
+- **Structural Modularity (SM)**: `0.013029 ± 0.004040`
+- **Inter-Service Coupling (ICP)**: `0.010090 ± 0.005302`
+- **Business Use Case Entropy (BCP)**: `0.416743 ± 0.097424`
+- **Interface Complexity (IFN)**: `0.784615 ± 0.219736`
+- **Non-Extreme Distribution (NED)**: `0.547727` *(1-NED: `0.452273`)*
+- **Domain Cohesion (CHD)**: `0.285749 ± 0.043238`
+- **Message Cohesion (CHM)**: `0.482201 ± 0.060236`
 - **Links**: [`dataset/cics-genapp/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/cics-genapp) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/cics-genapp/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/cics-genapp/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/cics-genapp/decomposition.json))
 
 ### 14. AutoCare Nepal ($K=9$, $V=49$)

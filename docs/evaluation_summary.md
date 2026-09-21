@@ -21,15 +21,15 @@ CoGCN optimizes an objective function with structural reconstruction, semantic a
 
 ## 10-Run Dynamic $K$ Metrics Summary Table across All Datasets
 
-| Order | Metric Code | Metric Name | Spring PetClinic ($K=8$) | JPetStore-6 ($K=5$) | AcmeAir ($K=15$) | PlantsByWebSphere ($K=5$) | DayTrader 7 ($K=16$) | JForum ($K=19$) | JavaFX Point-of-Sales ($K=3$) | SpringBlog ($K=8$) | Apache Roller ($K=19$) | Bear Board ($K=5$) | Train Ticket ($K=18$) | DietApp ($K=8$) | IBM CICS GenApp ($K=13$) | AutoCare Nepal ($K=9$) | Pharmacy Management System ($K=9$) | Favorable Direction |
+| Order | Metric Code | Metric Name | Spring PetClinic ($K=8$) | JPetStore-6 ($K=5$) | AcmeAir ($K=15$) | PlantsByWebSphere ($K=5$) | DayTrader 7 ($K=16$) | JForum ($K=19$) | JavaFX Point-of-Sales ($K=3$) | SpringBlog ($K=8$) | Apache Roller ($K=19$) | Bear Board ($K=5$) | Train Ticket ($K=19$) | DietApp ($K=8$) | IBM CICS GenApp ($K=13$) | AutoCare Nepal ($K=9$) | Pharmacy Management System ($K=9$) | Favorable Direction |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1** | **SM** | Structural Modularity | **`0.022459`** | **`0.194863`** | **`0.088446`** | **`0.043116`** | **`0.028411`** | **`0.026641`** | **`0.097203`** | **`0.135779`** | **`0.035508`** | **`0.114975`** | **`0.074897`** | **`0.228221`** | **`0.013029`** | **`0.094460`** | **`0.141847`** | Higher is better |
-| **2** | **ICP** | Inter-Call Pair / Coupling | **`0.086747`** | **`0.057539`** | **`0.081034`** | **`0.112823`** | **`0.119196`** | **`0.048122`** | **`0.017347`** | **`0.035505`** | **`0.038236`** | **`0.022071`** | **`0.000931`** | **`0.013115`** | **`0.010090`** | **`0.005012`** | **`0.020604`** | Lower is better |
-| **3** | **BCP** | Business Use Case Entropy | **`1.045257`** | **`1.423184`** | **`1.176342`** | **`1.301031`** | **`1.428384`** | **`2.713450`** | **`1.784612`** | **`1.786906`** | **`2.902296`** | **`1.769419`** | **`1.341427`** | **`0.907923`** | **`0.416743`** | **`0.985789`** | **`1.454387`** | Lower is better |
-| **4** | **IFN** | Interface Number | **`2.362500`** | **`3.080000`** | **`3.593333`** | **`5.340000`** | **`3.268750`** | **`16.489474`** | **`1.066667`** | **`2.762500`** | **`21.442105`** | **`2.240000`** | **`3.966667`** | **`1.850000`** | **`0.784615`** | **`0.900000`** | **`2.333333`** | Lower is better |
-| **5** | **NED** | Non-Extreme Distribution | **`0.839535`** | **`0.950000`** | **`0.791011`** | **`0.925000`** | **`0.880153`** | **`0.302069`** | **`0.944118`** | **`0.866667`** | **`0.096961`** | **`0.948718`** | **`0.057729`** | **`0.846296`** | **`0.547727`** | **`0.812245`** | **`0.888136`** | Lower $1-\text{NED}$ |
-| **6** | **CHD** | Cohesion at Domain Level | **`0.292898`** | **`0.211024`** | **`0.177063`** | **`0.348738`** | **`0.200535`** | **`0.114570`** | **`0.137681`** | **`0.307519`** | **`0.129071`** | **`0.337501`** | **`0.207772`** | **`0.359620`** | **`0.285749`** | **`0.271451`** | **`0.233178`** | Higher is better |
-| **7** | **CHM** | Cohesion at Message Level | **`0.412571`** | **`0.294669`** | **`0.303102`** | **`0.445328`** | **`0.340841`** | **`0.257365`** | **`0.439458`** | **`0.382475`** | **`0.268094`** | **`0.455889`** | **`0.314477`** | **`0.461536`** | **`0.482201`** | **`0.401065`** | **`0.261806`** | Higher is better |
+| **1** | **SM** | Structural Modularity | **`0.022459`** | **`0.194863`** | **`0.088446`** | **`0.043116`** | **`0.028411`** | **`0.026641`** | **`0.097203`** | **`0.135779`** | **`0.035508`** | **`0.114975`** | **`0.041519`** | **`0.228221`** | **`0.013029`** | **`0.094460`** | **`0.141847`** | Higher is better |
+| **2** | **ICP** | Inter-Call Pair / Coupling | **`0.086747`** | **`0.057539`** | **`0.081034`** | **`0.112823`** | **`0.119196`** | **`0.048122`** | **`0.017347`** | **`0.035505`** | **`0.038236`** | **`0.022071`** | **`0.017876`** | **`0.013115`** | **`0.010090`** | **`0.005012`** | **`0.020604`** | Lower is better |
+| **3** | **BCP** | Business Use Case Entropy | **`1.045257`** | **`1.423184`** | **`1.176342`** | **`1.301031`** | **`1.428384`** | **`2.713450`** | **`1.784612`** | **`1.786906`** | **`2.902296`** | **`1.769419`** | **`2.303672`** | **`0.907923`** | **`0.416743`** | **`0.985789`** | **`1.454387`** | Lower is better |
+| **4** | **IFN** | Interface Number | **`2.362500`** | **`3.080000`** | **`3.593333`** | **`5.340000`** | **`3.268750`** | **`16.489474`** | **`1.066667`** | **`2.762500`** | **`21.442105`** | **`2.240000`** | **`14.094737`** | **`1.850000`** | **`0.784615`** | **`0.900000`** | **`2.333333`** | Lower is better |
+| **5** | **NED** | Non-Extreme Distribution | **`0.839535`** | **`0.950000`** | **`0.791011`** | **`0.925000`** | **`0.880153`** | **`0.302069`** | **`0.944118`** | **`0.866667`** | **`0.096961`** | **`0.948718`** | **`0.064956`** | **`0.846296`** | **`0.547727`** | **`0.812245`** | **`0.888136`** | Lower $1-\text{NED}$ |
+| **6** | **CHD** | Cohesion at Domain Level | **`0.292898`** | **`0.211024`** | **`0.177063`** | **`0.348738`** | **`0.200535`** | **`0.114570`** | **`0.137681`** | **`0.307519`** | **`0.129071`** | **`0.337501`** | **`0.181792`** | **`0.359620`** | **`0.285749`** | **`0.271451`** | **`0.233178`** | Higher is better |
+| **7** | **CHM** | Cohesion at Message Level | **`0.412571`** | **`0.294669`** | **`0.303102`** | **`0.445328`** | **`0.340841`** | **`0.257365`** | **`0.439458`** | **`0.382475`** | **`0.268094`** | **`0.455889`** | **`0.284471`** | **`0.461536`** | **`0.482201`** | **`0.401065`** | **`0.261806`** | Higher is better |
 
 ---
 
@@ -155,16 +155,16 @@ CoGCN optimizes an objective function with structural reconstruction, semantic a
 - **Message Cohesion (CHM)**: `0.455889 ± 0.002889`
 - **Links**: [`dataset/bear-board/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/bear-board) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/bear-board/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/bear-board/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/bear-board/decomposition.json))
 
-### 11. Train Ticket ($K=18$, $V=634$)
+### 11. Train Ticket ($K=19$, $V=682$)
 - **System Overview**: Comprehensive industrial-scale benchmark suite for railway ticket booking, payment, routing, and passenger management.
-- **Dynamic Optimal Cluster Count**: $K=18$ (Score = `-0.0313`)
-- **Structural Modularity (SM)**: `0.074897 ± 0.004745`
-- **Inter-Service Coupling (ICP)**: `0.000931 ± 0.000188`
-- **Business Use Case Entropy (BCP)**: `1.341427 ± 0.129017`
-- **Interface Complexity (IFN)**: `3.966667 ± 0.470225`
-- **Non-Extreme Distribution (NED)**: `0.057729` *(1-NED: `0.942271`)*
-- **Domain Cohesion (CHD)**: `0.207772 ± 0.033057`
-- **Message Cohesion (CHM)**: `0.314477 ± 0.028792`
+- **Dynamic Optimal Cluster Count**: $K=19$ (Score = `-0.1742`)
+- **Structural Modularity (SM)**: `0.041519 ± 0.007673`
+- **Inter-Service Coupling (ICP)**: `0.017876 ± 0.005130`
+- **Business Use Case Entropy (BCP)**: `2.303672 ± 0.090813`
+- **Interface Complexity (IFN)**: `14.094737 ± 0.750180`
+- **Non-Extreme Distribution (NED)**: `0.064956` *(1-NED: `0.935044`)*
+- **Domain Cohesion (CHD)**: `0.181792 ± 0.034296`
+- **Message Cohesion (CHM)**: `0.284471 ± 0.035947`
 - **Links**: [`dataset/train-ticket/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/train-ticket) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/train-ticket/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/train-ticket/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/train-ticket/decomposition.json))
 
 ### 12. DietApp ($K=8$, $V=54$)

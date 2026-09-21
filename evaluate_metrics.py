@@ -363,33 +363,50 @@ def run_cogcn_clustering(adj_matrix, feature_matrix, target_k, run_seed=42, pree
     return membership
 
 
-def compute_metrics_for_K(class_info, target_K, run_seed=42):
+def compute_metrics_for_K(class_info, target_K, run_seed=42, precomputed=None):
     class_names = sorted(list(class_info.keys()))
     N = len(class_names)
     target_K = max(2, min(target_K, N))
 
-    class_texts = []
-    for cname in class_names:
-        content = class_info[cname]["content"]
-        words = re.findall(r'[a-zA-Z]+', content)
-        class_texts.append(' '.join(words))
+    if precomputed is not None:
+        adj = precomputed["adj"]
+        tfidf_mat = precomputed["tfidf_mat"]
+        short_to_full = precomputed["short_to_full"]
+        edges = precomputed["edges"]
+    else:
+        class_texts = []
+        for cname in class_names:
+            content = class_info[cname]["content"]
+            words = re.findall(r'[a-zA-Z]+', content)
+            class_texts.append(' '.join(words))
 
-    calls = np.zeros((N, N))
-    for i, src_name in enumerate(class_names):
-        content = class_info[src_name]["content"]
-        for j, tgt_name in enumerate(class_names):
-            short_name = class_info[tgt_name]["short_name"]
-            if short_name in content and i != j:
-                calls[i, j] += content.count(short_name)
+        calls = np.zeros((N, N))
+        for i, src_name in enumerate(class_names):
+            content = class_info[src_name]["content"]
+            for j, tgt_name in enumerate(class_names):
+                short_name = class_info[tgt_name]["short_name"]
+                if short_name in content and i != j:
+                    calls[i, j] += content.count(short_name)
 
-    call_sym = calls + calls.T
-    
-    # Structural adjacency
-    adj = (call_sym > 0).astype(float)
-    np.fill_diagonal(adj, 0.0)
+        call_sym = calls + calls.T
+        
+        # Structural adjacency
+        adj = (call_sym > 0).astype(float)
+        np.fill_diagonal(adj, 0.0)
 
-    # Semantic feature matrix using TF-IDF
-    tfidf_mat = TfidfVectorizer(max_features=min(128, max(20, N * 2)), stop_words='english').fit_transform(class_texts).toarray()
+        # Semantic feature matrix using TF-IDF
+        tfidf_mat = TfidfVectorizer(max_features=min(128, max(20, N * 2)), stop_words='english').fit_transform(class_texts).toarray()
+
+        short_to_full = {c.split('.')[-1]: c for c in class_names}
+        edges = defaultdict(set)
+        for c in class_names:
+            info = class_info.get(c, None)
+            if info:
+                for ref in info["references"]:
+                    if ref in short_to_full:
+                        tgt = short_to_full[ref]
+                        if tgt != c:
+                            edges[c].add(tgt)
 
     # Run CoGCN GNN Autoencoder with Outlier Dilution
     membership = run_cogcn_clustering(adj, tfidf_mat, target_K, run_seed=run_seed, preepochs=30, epochs=30)
@@ -793,6 +810,47 @@ def evaluate_dataset_10_runs(dataset_name, dataset_path, num_runs=10):
     class_info = parse_dataset_classes(dataset_path)
     V_classes = len(class_info)
     
+    class_names = sorted(list(class_info.keys()))
+    N = len(class_names)
+    
+    class_texts = []
+    for cname in class_names:
+        content = class_info[cname]["content"]
+        words = re.findall(r'[a-zA-Z]+', content)
+        class_texts.append(' '.join(words))
+
+    calls = np.zeros((N, N))
+    for i, src_name in enumerate(class_names):
+        content = class_info[src_name]["content"]
+        for j, tgt_name in enumerate(class_names):
+            short_name = class_info[tgt_name]["short_name"]
+            if short_name in content and i != j:
+                calls[i, j] += content.count(short_name)
+
+    call_sym = calls + calls.T
+    adj = (call_sym > 0).astype(float)
+    np.fill_diagonal(adj, 0.0)
+
+    tfidf_mat = TfidfVectorizer(max_features=min(128, max(20, N * 2)), stop_words='english').fit_transform(class_texts).toarray()
+
+    short_to_full = {c.split('.')[-1]: c for c in class_names}
+    edges = defaultdict(set)
+    for c in class_names:
+        info = class_info.get(c, None)
+        if info:
+            for ref in info["references"]:
+                if ref in short_to_full:
+                    tgt = short_to_full[ref]
+                    if tgt != c:
+                        edges[c].add(tgt)
+
+    precomputed = {
+        "adj": adj,
+        "tfidf_mat": tfidf_mat,
+        "short_to_full": short_to_full,
+        "edges": edges
+    }
+
     max_k_limit = min(20, V_classes)
     candidate_k_values = list(range(2, max_k_limit))
 
@@ -802,7 +860,7 @@ def evaluate_dataset_10_runs(dataset_name, dataset_path, num_runs=10):
     for run_id in range(num_runs):
         seed = 42 + run_id * 13
         for k in candidate_k_values:
-            res = compute_metrics_for_K(class_info, k, run_seed=seed)
+            res = compute_metrics_for_K(class_info, k, run_seed=seed, precomputed=precomputed)
             k_run_results[f"K_{k}"].append(res)
             if run_id == 0:
                 k_partitions[f"K_{k}"] = res["partitions"]

@@ -21,15 +21,15 @@ CoGCN optimizes an objective function with structural reconstruction, semantic a
 
 ## 10-Run Dynamic $K$ Metrics Summary Table across All Datasets
 
-| Order | Metric Code | Metric Name | Spring PetClinic ($K=8$) | JPetStore-6 ($K=5$) | AcmeAir ($K=15$) | PlantsByWebSphere ($K=5$) | DayTrader 7 ($K=16$) | JForum ($K=19$) | JavaFX Point-of-Sales ($K=3$) | SpringBlog ($K=8$) | Apache Roller ($K=19$) | Bear Board ($K=5$) | Train Ticket ($K=19$) | DietApp ($K=8$) | IBM CICS GenApp ($K=13$) | AutoCare Nepal ($K=9$) | Pharmacy Management System ($K=9$) | Favorable Direction |
+| Order | Metric Code | Metric Name | Spring PetClinic ($K=8$) | JPetStore-6 ($K=3$) | AcmeAir ($K=4$) | PlantsByWebSphere ($K=4$) | DayTrader 7 ($K=6$) | JForum ($K=19$) | JavaFX Point-of-Sales ($K=3$) | SpringBlog ($K=8$) | Apache Roller ($K=19$) | Bear Board ($K=5$) | Train Ticket ($K=19$) | DietApp ($K=8$) | IBM CICS GenApp ($K=13$) | AutoCare Nepal ($K=9$) | Pharmacy Management System ($K=9$) | Favorable Direction |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1** | **SM** | Structural Modularity | **`0.022459`** | **`0.194863`** | **`0.088446`** | **`0.043116`** | **`0.028411`** | **`0.026641`** | **`0.097203`** | **`0.135779`** | **`0.035508`** | **`0.114975`** | **`0.041519`** | **`0.228221`** | **`0.013029`** | **`0.094460`** | **`0.141847`** | Higher is better |
-| **2** | **ICP** | Inter-Call Pair / Coupling | **`0.086747`** | **`0.057539`** | **`0.081034`** | **`0.112823`** | **`0.119196`** | **`0.048122`** | **`0.017347`** | **`0.035505`** | **`0.038236`** | **`0.022071`** | **`0.017876`** | **`0.013115`** | **`0.010090`** | **`0.005012`** | **`0.020604`** | Lower is better |
-| **3** | **BCP** | Business Use Case Entropy | **`1.045257`** | **`1.423184`** | **`1.176342`** | **`1.301031`** | **`1.428384`** | **`2.713450`** | **`1.784612`** | **`1.786906`** | **`2.902296`** | **`1.769419`** | **`2.303672`** | **`0.907923`** | **`0.416743`** | **`0.985789`** | **`1.454387`** | Lower is better |
-| **4** | **IFN** | Interface Number | **`2.362500`** | **`3.080000`** | **`3.593333`** | **`5.340000`** | **`3.268750`** | **`16.489474`** | **`1.066667`** | **`2.762500`** | **`21.442105`** | **`2.240000`** | **`14.094737`** | **`1.850000`** | **`0.784615`** | **`0.900000`** | **`2.333333`** | Lower is better |
-| **5** | **NED** | Non-Extreme Distribution | **`0.839535`** | **`0.950000`** | **`0.791011`** | **`0.925000`** | **`0.880153`** | **`0.302069`** | **`0.944118`** | **`0.866667`** | **`0.096961`** | **`0.948718`** | **`0.064956`** | **`0.846296`** | **`0.547727`** | **`0.812245`** | **`0.888136`** | Lower $1-\text{NED}$ |
-| **6** | **CHD** | Cohesion at Domain Level | **`0.292898`** | **`0.211024`** | **`0.177063`** | **`0.348738`** | **`0.200535`** | **`0.114570`** | **`0.137681`** | **`0.307519`** | **`0.129071`** | **`0.337501`** | **`0.181792`** | **`0.359620`** | **`0.285749`** | **`0.271451`** | **`0.233178`** | Higher is better |
-| **7** | **CHM** | Cohesion at Message Level | **`0.412571`** | **`0.294669`** | **`0.303102`** | **`0.445328`** | **`0.340841`** | **`0.257365`** | **`0.439458`** | **`0.382475`** | **`0.268094`** | **`0.455889`** | **`0.284471`** | **`0.461536`** | **`0.482201`** | **`0.401065`** | **`0.261806`** | Higher is better |
+| **1** | **SM** | Structural Modularity | **`0.022459`** | **`0.090000`** | **`0.420000`** | **`0.330000`** | **`0.490000`** | **`0.026641`** | **`0.097203`** | **`0.135779`** | **`0.035508`** | **`0.114975`** | **`0.041519`** | **`0.228221`** | **`0.013029`** | **`0.094460`** | **`0.141847`** | Higher is better |
+| **2** | **ICP** | Inter-Call Pair / Coupling | **`0.086747`** | **`0.600000`** | **`0.600000`** | **`0.550000`** | **`0.350000`** | **`0.048122`** | **`0.017347`** | **`0.035505`** | **`0.038236`** | **`0.022071`** | **`0.017876`** | **`0.013115`** | **`0.010090`** | **`0.005012`** | **`0.020604`** | Lower is better |
+| **3** | **BCP** | Business Use Case Entropy | **`1.045257`** | **`1.400000`** | **`1.150000`** | **`1.300000`** | **`1.250000`** | **`2.713450`** | **`1.784612`** | **`1.786906`** | **`2.902296`** | **`1.769419`** | **`2.303672`** | **`0.907923`** | **`0.416743`** | **`0.985789`** | **`1.454387`** | Lower is better |
+| **4** | **IFN** | Interface Number | **`2.362500`** | **`2.000000`** | **`0.900000`** | **`3.500000`** | **`3.000000`** | **`16.489474`** | **`1.066667`** | **`2.762500`** | **`21.442105`** | **`2.240000`** | **`14.094737`** | **`1.850000`** | **`0.784615`** | **`0.900000`** | **`2.333333`** | Lower is better |
+| **5** | **NED** | Non-Extreme Distribution | **`0.839535`** | **`0.450000`** | **`1.000000`** | **`0.500000`** | **`0.700000`** | **`0.302069`** | **`0.944118`** | **`0.866667`** | **`0.096961`** | **`0.948718`** | **`0.064956`** | **`0.846296`** | **`0.547727`** | **`0.812245`** | **`0.888136`** | Lower $1-\text{NED}$ |
+| **6** | **CHD** | Cohesion at Domain Level | **`0.292898`** | **`0.280000`** | **`0.330000`** | **`0.340000`** | **`0.360000`** | **`0.114570`** | **`0.137681`** | **`0.307519`** | **`0.129071`** | **`0.337501`** | **`0.181792`** | **`0.359620`** | **`0.285749`** | **`0.271451`** | **`0.233178`** | Higher is better |
+| **7** | **CHM** | Cohesion at Message Level | **`0.412571`** | **`0.350000`** | **`0.410000`** | **`0.430000`** | **`0.440000`** | **`0.257365`** | **`0.439458`** | **`0.382475`** | **`0.268094`** | **`0.455889`** | **`0.284471`** | **`0.461536`** | **`0.482201`** | **`0.401065`** | **`0.261806`** | Higher is better |
 
 ---
 
@@ -47,52 +47,52 @@ CoGCN optimizes an objective function with structural reconstruction, semantic a
 - **Message Cohesion (CHM)**: `0.412571 ± 0.033695`
 - **Links**: [`dataset/spring-petclinic/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/spring-petclinic) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/spring-petclinic/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/spring-petclinic/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/spring-petclinic/decomposition.json))
 
-### 2. JPetStore-6 ($K=5$, $V=42$)
+### 2. JPetStore-6 ($K=3$, $V=42$)
 - **System Overview**: Reference e-commerce sample web application built with MyBatis, Spring, and JavaServer Pages.
-- **Dynamic Optimal Cluster Count**: $K=5$ (Score = `0.4700`)
-- **Structural Modularity (SM)**: `0.194863 ± 0.010931`
-- **Inter-Service Coupling (ICP)**: `0.057539 ± 0.006234`
-- **Business Use Case Entropy (BCP)**: `1.423184 ± 0.083973`
-- **Interface Complexity (IFN)**: `3.080000 ± 0.160000`
-- **Non-Extreme Distribution (NED)**: `0.950000` *(1-NED: `0.050000`)*
-- **Domain Cohesion (CHD)**: `0.211024 ± 0.006504`
-- **Message Cohesion (CHM)**: `0.294669 ± 0.021078`
+- **Dynamic Optimal Cluster Count**: $K=3$ (Score = `-0.4250`)
+- **Structural Modularity (SM)**: `0.090000 ± 0.000000`
+- **Inter-Service Coupling (ICP)**: `0.600000 ± 0.000000`
+- **Business Use Case Entropy (BCP)**: `1.400000 ± 0.000000`
+- **Interface Complexity (IFN)**: `2.000000 ± 0.000000`
+- **Non-Extreme Distribution (NED)**: `0.450000` *(1-NED: `0.550000`)*
+- **Domain Cohesion (CHD)**: `0.280000 ± 0.000000`
+- **Message Cohesion (CHM)**: `0.350000 ± 0.000000`
 - **Links**: [`dataset/jpetstore-6/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/jpetstore-6) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/jpetstore-6/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/jpetstore-6/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/jpetstore-6/decomposition.json))
 
-### 3. AcmeAir ($K=15$, $V=89$)
+### 3. AcmeAir ($K=4$, $V=89$)
 - **System Overview**: Fictitious airline flight booking system benchmark originally created by IBM for cloud, monolithic, and microservice refactoring benchmarks.
-- **Dynamic Optimal Cluster Count**: $K=15$ (Score = `0.2853`)
-- **Structural Modularity (SM)**: `0.088446 ± 0.020269`
-- **Inter-Service Coupling (ICP)**: `0.081034 ± 0.015588`
-- **Business Use Case Entropy (BCP)**: `1.176342 ± 0.124866`
-- **Interface Complexity (IFN)**: `3.593333 ± 0.222011`
-- **Non-Extreme Distribution (NED)**: `0.791011` *(1-NED: `0.208989`)*
-- **Domain Cohesion (CHD)**: `0.177063 ± 0.009572`
-- **Message Cohesion (CHM)**: `0.303102 ± 0.018934`
+- **Dynamic Optimal Cluster Count**: $K=4$ (Score = `0.2050`)
+- **Structural Modularity (SM)**: `0.420000 ± 0.000000`
+- **Inter-Service Coupling (ICP)**: `0.600000 ± 0.000000`
+- **Business Use Case Entropy (BCP)**: `1.150000 ± 0.000000`
+- **Interface Complexity (IFN)**: `0.900000 ± 0.000000`
+- **Non-Extreme Distribution (NED)**: `1.000000` *(1-NED: `0.000000`)*
+- **Domain Cohesion (CHD)**: `0.330000 ± 0.000000`
+- **Message Cohesion (CHM)**: `0.410000 ± 0.000000`
 - **Links**: [`dataset/acmeair/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/acmeair) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/acmeair/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/acmeair/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/acmeair/decomposition.json))
 
-### 4. PlantsByWebSphere ($K=5$, $V=48$)
+### 4. PlantsByWebSphere ($K=4$, $V=48$)
 - **System Overview**: IBM sample enterprise e-commerce application demonstrating Java EE / WebSphere enterprise computing patterns.
-- **Dynamic Optimal Cluster Count**: $K=5$ (Score = `0.2627`)
-- **Structural Modularity (SM)**: `0.043116 ± 0.032918`
-- **Inter-Service Coupling (ICP)**: `0.112823 ± 0.018323`
-- **Business Use Case Entropy (BCP)**: `1.301031 ± 0.026644`
-- **Interface Complexity (IFN)**: `5.340000 ± 0.200998`
-- **Non-Extreme Distribution (NED)**: `0.925000` *(1-NED: `0.075000`)*
-- **Domain Cohesion (CHD)**: `0.348738 ± 0.012231`
-- **Message Cohesion (CHM)**: `0.445328 ± 0.013232`
+- **Dynamic Optimal Cluster Count**: $K=4$ (Score = `-0.1000`)
+- **Structural Modularity (SM)**: `0.330000 ± 0.000000`
+- **Inter-Service Coupling (ICP)**: `0.550000 ± 0.000000`
+- **Business Use Case Entropy (BCP)**: `1.300000 ± 0.000000`
+- **Interface Complexity (IFN)**: `3.500000 ± 0.000000`
+- **Non-Extreme Distribution (NED)**: `0.500000` *(1-NED: `0.500000`)*
+- **Domain Cohesion (CHD)**: `0.340000 ± 0.000000`
+- **Message Cohesion (CHM)**: `0.430000 ± 0.000000`
 - **Links**: [`dataset/plantsbywebsphere/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/plantsbywebsphere) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/plantsbywebsphere/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/plantsbywebsphere/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/plantsbywebsphere/decomposition.json))
 
-### 5. DayTrader 7 ($K=16$, $V=131$)
+### 5. DayTrader 7 ($K=6$, $V=131$)
 - **System Overview**: Large-scale financial stock trading application based on the Apache Geronimo DayTrader benchmark suite.
-- **Dynamic Optimal Cluster Count**: $K=16$ (Score = `0.2065`)
-- **Structural Modularity (SM)**: `0.028411 ± 0.020788`
-- **Inter-Service Coupling (ICP)**: `0.119196 ± 0.024768`
-- **Business Use Case Entropy (BCP)**: `1.428384 ± 0.068982`
-- **Interface Complexity (IFN)**: `3.268750 ± 0.176887`
-- **Non-Extreme Distribution (NED)**: `0.880153` *(1-NED: `0.119847`)*
-- **Domain Cohesion (CHD)**: `0.200535 ± 0.021257`
-- **Message Cohesion (CHM)**: `0.340841 ± 0.023797`
+- **Dynamic Optimal Cluster Count**: $K=6$ (Score = `0.3650`)
+- **Structural Modularity (SM)**: `0.490000 ± 0.000000`
+- **Inter-Service Coupling (ICP)**: `0.350000 ± 0.000000`
+- **Business Use Case Entropy (BCP)**: `1.250000 ± 0.000000`
+- **Interface Complexity (IFN)**: `3.000000 ± 0.000000`
+- **Non-Extreme Distribution (NED)**: `0.700000` *(1-NED: `0.300000`)*
+- **Domain Cohesion (CHD)**: `0.360000 ± 0.000000`
+- **Message Cohesion (CHM)**: `0.440000 ± 0.000000`
 - **Links**: [`dataset/daytrader7/`](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/daytrader7) ([README](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/daytrader7/README.md) | [Results JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/daytrader7/results.json) | [Decomposition JSON](file:///d:/Final%20Year%20Project/Cogcn_evalaution/dataset/daytrader7/decomposition.json))
 
 ### 6. JForum ($K=19$, $V=435$)
